@@ -25,26 +25,58 @@ targets:
       path: Sources/TinyLog/Info.plist
       properties:
         CFBundleDocumentTypes:
-          - CFBundleTypeName: Log Document
+          - CFBundleTypeName: Log File
             CFBundleTypeRole: Viewer
             LSHandlerRank: Default
             LSItemContentTypes:
-              - public.log
-              - public.plain-text
+              - com.tinylog.log
             CFBundleTypeExtensions:
               - log
+          - CFBundleTypeName: Output File
+            CFBundleTypeRole: Viewer
+            LSHandlerRank: Default
+            LSItemContentTypes:
+              - com.tinylog.out
+            CFBundleTypeExtensions:
               - out
+          - CFBundleTypeName: Error File
+            CFBundleTypeRole: Viewer
+            LSHandlerRank: Default
+            LSItemContentTypes:
+              - com.tinylog.err
+            CFBundleTypeExtensions:
               - err
+          - CFBundleTypeName: Plain Text
+            CFBundleTypeRole: Viewer
+            LSHandlerRank: Alternate
+            LSItemContentTypes:
+              - public.plain-text
+            CFBundleTypeExtensions:
               - txt
+              - text
         LSApplicationCategoryType: public.app-category.productivity
         UTImportedTypeDeclarations:
-          - UTTypeIdentifier: public.log
-            UTTypeDescription: Log Document
+          - UTTypeIdentifier: com.tinylog.log
+            UTTypeDescription: Log File
             UTTypeConformsTo:
               - public.plain-text
             UTTypeTagSpecification:
               public.filename-extension:
                 - log
+          - UTTypeIdentifier: com.tinylog.out
+            UTTypeDescription: Output File
+            UTTypeConformsTo:
+              - public.plain-text
+            UTTypeTagSpecification:
+              public.filename-extension:
+                - out
+          - UTTypeIdentifier: com.tinylog.err
+            UTTypeDescription: Error File
+            UTTypeConformsTo:
+              - public.plain-text
+            UTTypeTagSpecification:
+              public.filename-extension:
+                - err
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.tinylog.app
