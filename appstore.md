@@ -3,7 +3,7 @@
 ## App Information
 
 - **App Name**: TinyLog
-- **Subtitle** (30 chars max): A lightweight log file viewer
+- **Subtitle** (30 chars max): A fast log file viewer
 - **Bundle ID**: com.tinylog.app
 - **SKU**: tinylog-001
 - **Primary Language**: English (U.S.)
@@ -37,12 +37,15 @@ Features:
 - Multiple independent windows
 - Light and dark mode — follows your system
 - Opens .log, .out, .err, and .txt files directly from Finder
+- On-device AI assistant (Cmd+K) — ask questions, analyze patterns, explain errors. Runs via CoreML, no API key required
 
 Built entirely with native macOS technologies. No Electron. No web views. Designed for developers who want to read logs, not configure dashboards.
 
+Part of TinySuite — a family of native macOS micro-tools that each do one thing well. Every app is built around the file, not around itself. No accounts, no cloud, no lock-in. Open your file, understand it, act on it. Learn more at tinysuite.app.
+
 ### Keywords (100 chars max, comma-separated)
 
-log,viewer,tail,filter,debug,error,developer,syslog,monitoring,text
+log,viewer,tail,filter,debug,error,developer,syslog,tinysuite,text
 
 ### What's New (Version 1.0.0)
 
@@ -58,14 +61,11 @@ https://github.com/michellzappa/tinylog/issues
 
 ### Marketing URL (optional)
 
-https://github.com/michellzappa/tinylog
+https://tinysuite.app
 
 ### Privacy Policy URL (required)
 
-<!-- You need a privacy policy URL even if the app collects no data. -->
-<!-- Example: https://michellzappa.github.io/tinylog/privacy -->
-
-TODO: Create a simple privacy policy page stating the app collects no data.
+https://tinysuite.app/privacy.html
 
 ## Privacy Details
 

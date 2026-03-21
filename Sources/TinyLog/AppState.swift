@@ -88,6 +88,46 @@ final class AppState: FileState {
         )
     }
 
+    // MARK: - Spotlight
+
+    private static let spotlightDomain = "com.tinyapps.tinylog.files"
+
+    override func didOpenFile(_ url: URL) {
+        SpotlightIndexer.index(file: url, content: content, domainID: Self.spotlightDomain)
+    }
+
+    override func didSaveFile(_ url: URL) {
+        didOpenFile(url)
+    }
+
+    // MARK: - Export
+
+    var exportHTML: String {
+        let entries = filteredEntries
+        guard !entries.isEmpty else {
+            return ExportManager.wrapHTML(body: "<p>No log entries</p>", title: selectedFile?.lastPathComponent ?? "log")
+        }
+        var body = "<table><thead><tr><th>#</th><th>Timestamp</th><th>Level</th><th>Message</th></tr></thead><tbody>"
+        for entry in entries {
+            let levelClass: String
+            switch entry.level {
+            case .error: levelClass = "level-error"
+            case .warn: levelClass = "level-warn"
+            case .info: levelClass = "level-info"
+            case .debug: levelClass = "level-debug"
+            case .trace: levelClass = "level-trace"
+            case .unknown: levelClass = ""
+            }
+            let ts = ExportManager.escapeHTML(entry.timestamp ?? "")
+            let msg = ExportManager.escapeHTML(entry.message)
+            body += "<tr><td>\(entry.id + 1)</td><td>\(ts)</td>"
+            body += "<td class=\"\(levelClass)\">\(entry.level == .unknown ? "" : entry.level.rawValue)</td>"
+            body += "<td>\(msg)</td></tr>"
+        }
+        body += "</tbody></table>"
+        return ExportManager.wrapHTML(body: body, title: selectedFile?.lastPathComponent ?? "log")
+    }
+
     // Filter state
     var filterLevel: LogLevel? = nil
     var filterText: String = ""
