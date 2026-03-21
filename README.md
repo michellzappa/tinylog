@@ -5,6 +5,8 @@ A minimal, fast log file viewer for macOS.
 ![macOS](https://img.shields.io/badge/macOS-26%2B-blue)
 ![Swift](https://img.shields.io/badge/Swift-5.9-orange)
 
+![TinyLog screenshot](screenshot.png)
+
 ## Features
 
 - **Live tail mode** — follows new output as it's written, like `tail -f`
