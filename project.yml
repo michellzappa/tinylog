@@ -21,6 +21,8 @@ targets:
         buildPhase: resources
       - path: Sources/TinyLog/Resources/AppIcon.icon
         buildPhase: resources
+      - path: Sources/TinyLog/Resources/DocIcons
+        buildPhase: resources
     info:
       path: Sources/TinyLog/Info.plist
       properties:
@@ -28,6 +30,7 @@ targets:
           - CFBundleTypeName: Log File
             CFBundleTypeRole: Viewer
             LSHandlerRank: Default
+            CFBundleTypeIconFile: doc_log
             LSItemContentTypes:
               - com.tinylog.log
             CFBundleTypeExtensions:

@@ -1,6 +1,6 @@
 # TinyLog
 
-A minimal, fast log file viewer for macOS.
+A native macOS log file viewer. Color-coded levels, live tail mode, and automatic highlighting of timestamps, IPs, and stack traces.
 
 ![macOS](https://img.shields.io/badge/macOS-26%2B-blue)
 ![Swift](https://img.shields.io/badge/Swift-5.9-orange)

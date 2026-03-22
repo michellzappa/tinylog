@@ -11,6 +11,8 @@
 			<array>
 				<string>log</string>
 			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>doc_log</string>
 			<key>CFBundleTypeName</key>
 			<string>Log File</string>
 			<key>CFBundleTypeRole</key>

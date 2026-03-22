@@ -1,6 +1,7 @@
 import SwiftUI
 import AppKit
 import TinyKit
+import UniformTypeIdentifiers
 
 // MARK: - FocusedValue key for per-window AppState
 
@@ -39,12 +40,29 @@ struct TinyLogApp: App {
                 Button("Welcome to TinyLog") {
                     NotificationCenter.default.post(name: .showWelcome, object: nil)
                 }
+                Divider()
+                Button("Feedback\u{2026}") {
+                    NSWorkspace.shared.open(URL(string: "https://tinysuite.app/support.html")!)
+                }
+                Button("TinySuite Website") {
+                    NSWorkspace.shared.open(URL(string: "https://tinysuite.app")!)
+                }
+            }
+
+            CommandGroup(replacing: .help) {
+                Button("TinyLog on GitHub") {
+                    NSWorkspace.shared.open(URL(string: "https://github.com/michellzappa/tinylog")!)
+                }
             }
 
             CommandGroup(after: .newItem) {
                 OpenFileButton()
 
                 OpenFolderButton()
+
+                RecentFilesMenu { url in
+                    activeState?.selectFile(url)
+                }
 
                 Divider()
 
@@ -81,6 +99,9 @@ struct WindowContentView: View {
 
     var body: some View {
         ContentView(state: state, columnVisibility: $columnVisibility)
+            .defaultAppBanner(appName: "TinyLog", associations: [
+                FileTypeAssociation(utType: UTType("com.tinylog.log") ?? .plainText, label: ".log files"),
+            ])
             .navigationTitle(state.selectedFile?.lastPathComponent ?? "TinyLog")
             .focusedSceneValue(\.appState, state)
             .onAppear {
@@ -107,14 +128,15 @@ struct WindowContentView: View {
             .welcomeSheet(
                 isPresented: $showWelcome,
                 appName: "TinyLog",
-                subtitle: "A tiny log viewer.",
+                subtitle: "A minimal, fast log file viewer for macOS.",
                 features: [
                     (icon: "doc.text.below.ecg", title: "Log Viewer", description: "View and browse log files with syntax highlighting"),
                     (icon: "line.3.horizontal.decrease.circle", title: "Level Filtering", description: "Filter by ERROR, WARN, INFO, DEBUG, or TRACE"),
                     (icon: "paintbrush", title: "Syntax Highlighting", description: "Color-coded log levels, timestamps, and IPs"),
                     (icon: "arrow.down.to.line", title: "Live Tail", description: "Follow log files as they update in real-time"),
                 ],
-                onOpen: { state.openFolder() },
+                onOpenFolder: { state.openFolder() },
+                onOpenFile: { state.openFile() },
                 onDismiss: { state.restoreLastFolder() }
             )
             .background(WindowCloseGuard(state: state))

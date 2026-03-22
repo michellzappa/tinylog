@@ -27,21 +27,7 @@ struct ContentView: View {
                     Divider()
                 }
                 if showPreview {
-                    EditorSplitView {
-                        TinyEditorView(
-                            text: $state.content,
-                            wordWrap: $wordWrap,
-                            fontSize: $fontSize,
-                            showLineNumbers: $showLineNumbers,
-                            shouldHighlight: state.isLogFile,
-                            highlighterProvider: { LogHighlighter() },
-                            commentStyle: .hash,
-                            isEditable: false,
-                            jumpToRange: $jumpToRange
-                        )
-                    } right: {
-                        LogPreviewView(state: state, jumpToRange: $jumpToRange)
-                    }
+                    LogPreviewView(state: state, jumpToRange: $jumpToRange)
                 } else {
                     TinyEditorView(
                         text: $state.content,
@@ -136,9 +122,9 @@ struct ContentView: View {
                     Button {
                         withAnimation { previewUserPref.toggle() }
                     } label: {
-                        Image(systemName: previewUserPref ? "rectangle.righthalf.filled" : "rectangle.righthalf.inset.filled")
+                        Image(systemName: previewUserPref ? "tablecells" : "doc.plaintext")
                     }
-                    .help("Toggle Log Preview (\u{2325}P)")
+                    .help("Toggle Table/Raw View (\u{2325}P)")
                     Button {
                         state.isFollowing.toggle()
                     } label: {
