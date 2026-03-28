@@ -1,0 +1,17 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build TinyLog
+        run: xcodebuild clean build -project TinyLog.xcodeproj -scheme TinyLog -configuration Release -derivedDataPath /tmp/tinybuild/tinylog CODE_SIGN_IDENTITY="-"
