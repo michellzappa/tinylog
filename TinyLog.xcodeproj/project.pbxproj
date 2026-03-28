@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1301E3971F60357573623158 /* TinyKit in Frameworks */ = {isa = PBXBuildFile; productRef = C30C7F76B72E82FBC89FAD17 /* TinyKit */; };
+		200374DA413F299CD6233F5C /* LogPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECBEBE34C923EC3748312E /* LogPreviewView.swift */; };
+		65847DA3BD651428C968869F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0D544A87BDE6E9B1EFCE60 /* ContentView.swift */; };
+		6EAED121C55EACF4F6C0FCAF /* doc_log.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7357513D82EFA8DB518BD3CD /* doc_log.icns */; };
+		9B286570CFE233141EEDC5E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79B87420E2C76B49A34AAD34 /* Assets.xcassets */; };
+		A5AE1D86B634AB78CAF284C9 /* TinyLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE0AB8A64CCEBAE0ECC567 /* TinyLogApp.swift */; };
+		C07AD86B81963BF51DD60303 /* LogHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D064F84B189C07EFB5348A6 /* LogHighlighter.swift */; };
+		CA14002B88545F3078A87B8A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F99846382AB61593218878 /* AppState.swift */; };
+		CE706B8611D2EA087E4E1263 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = C74B9433538E02E27961811D /* AppIcon.icon */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D0D544A87BDE6E9B1EFCE60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7357513D82EFA8DB518BD3CD /* doc_log.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = doc_log.icns; sourceTree = "<group>"; };
+		79B87420E2C76B49A34AAD34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7FBA0710CD7C9F54C01D068A /* TinyKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TinyKit; path = Packages/TinyKit; sourceTree = SOURCE_ROOT; };
+		99ECBEBE34C923EC3748312E /* LogPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPreviewView.swift; sourceTree = "<group>"; };
+		9D064F84B189C07EFB5348A6 /* LogHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHighlighter.swift; sourceTree = "<group>"; };
+		B2F99846382AB61593218878 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		BCDE0AB8A64CCEBAE0ECC567 /* TinyLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyLogApp.swift; sourceTree = "<group>"; };
+		C74B9433538E02E27961811D /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		CD48048AD7BF3AABC783DE3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E121FA10F3600C7660EE6501 /* TinyLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E09FB7E9015D7B702E79123B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1301E3971F60357573623158 /* TinyKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31BADA670A905847BC7BEB51 /* TinyLog */ = {
+			isa = PBXGroup;
+			children = (
+				B2F99846382AB61593218878 /* AppState.swift */,
+				5D0D544A87BDE6E9B1EFCE60 /* ContentView.swift */,
+				CD48048AD7BF3AABC783DE3A /* Info.plist */,
+				9D064F84B189C07EFB5348A6 /* LogHighlighter.swift */,
+				99ECBEBE34C923EC3748312E /* LogPreviewView.swift */,
+				BCDE0AB8A64CCEBAE0ECC567 /* TinyLogApp.swift */,
+			);
+			name = TinyLog;
+			path = Sources/TinyLog;
+			sourceTree = "<group>";
+		};
+		33E08F759F5E3132B80C2D42 = {
+			isa = PBXGroup;
+			children = (
+				93DF6910738F6A62FC05CB9B /* DocIcons */,
+				653B606A6C06E511D19E4817 /* Packages */,
+				33E19ED3FBC2585D18126FF2 /* Resources */,
+				31BADA670A905847BC7BEB51 /* TinyLog */,
+				88EC0D8427AC2343430DFF36 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		33E19ED3FBC2585D18126FF2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C74B9433538E02E27961811D /* AppIcon.icon */,
+				79B87420E2C76B49A34AAD34 /* Assets.xcassets */,
+			);
+			name = Resources;
+			path = Sources/TinyLog/Resources;
+			sourceTree = "<group>";
+		};
+		653B606A6C06E511D19E4817 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				7FBA0710CD7C9F54C01D068A /* TinyKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		88EC0D8427AC2343430DFF36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E121FA10F3600C7660EE6501 /* TinyLog.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93DF6910738F6A62FC05CB9B /* DocIcons */ = {
+			isa = PBXGroup;
+			children = (
+				7357513D82EFA8DB518BD3CD /* doc_log.icns */,
+			);
+			name = DocIcons;
+			path = Sources/TinyLog/Resources/DocIcons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		753CFC75D7F71DB6AE1687CD /* TinyLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100397F8C41ABECC68A65016 /* Build configuration list for PBXNativeTarget "TinyLog" */;
+			buildPhases = (
+				7B7E3FE9D6CAD39493912BEE /* Sources */,
+				02E0D4EE03DA412873FD52C4 /* Resources */,
+				E09FB7E9015D7B702E79123B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyLog;
+			packageProductDependencies = (
+				C30C7F76B72E82FBC89FAD17 /* TinyKit */,
+			);
+			productName = TinyLog;
+			productReference = E121FA10F3600C7660EE6501 /* TinyLog.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99B677D377C05643ED2AB047 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					753CFC75D7F71DB6AE1687CD = {
+						DevelopmentTeam = 992N457T8D;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B376AE3B5B22C40E79E082F1 /* Build configuration list for PBXProject "TinyLog" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 33E08F759F5E3132B80C2D42;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				36053597A1BEC581F2BDD4E0 /* XCLocalSwiftPackageReference "Packages/TinyKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 88EC0D8427AC2343430DFF36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				753CFC75D7F71DB6AE1687CD /* TinyLog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02E0D4EE03DA412873FD52C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE706B8611D2EA087E4E1263 /* AppIcon.icon in Resources */,
+				9B286570CFE233141EEDC5E5 /* Assets.xcassets in Resources */,
+				6EAED121C55EACF4F6C0FCAF /* doc_log.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B7E3FE9D6CAD39493912BEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA14002B88545F3078A87B8A /* AppState.swift in Sources */,
+				65847DA3BD651428C968869F /* ContentView.swift in Sources */,
+				C07AD86B81963BF51DD60303 /* LogHighlighter.swift in Sources */,
+				200374DA413F299CD6233F5C /* LogPreviewView.swift in Sources */,
+				A5AE1D86B634AB78CAF284C9 /* TinyLogApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2DB7FB7B4A71DE73AD7CA3B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = TinyLog.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 992N457T8D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Sources/TinyLog/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = /Applications;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tinylog.app;
+				PRODUCT_NAME = TinyLog;
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		2EB4AEC3A438D19067005394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		459B031731A9D089B204F714 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = TinyLog.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 992N457T8D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Sources/TinyLog/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = /Applications;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tinylog.app;
+				PRODUCT_NAME = TinyLog;
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		DA8C5EC4D9B79D659C6B3707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		100397F8C41ABECC68A65016 /* Build configuration list for PBXNativeTarget "TinyLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DB7FB7B4A71DE73AD7CA3B7 /* Debug */,
+				459B031731A9D089B204F714 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B376AE3B5B22C40E79E082F1 /* Build configuration list for PBXProject "TinyLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA8C5EC4D9B79D659C6B3707 /* Debug */,
+				2EB4AEC3A438D19067005394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		36053597A1BEC581F2BDD4E0 /* XCLocalSwiftPackageReference "Packages/TinyKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/TinyKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C30C7F76B72E82FBC89FAD17 /* TinyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TinyKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 99B677D377C05643ED2AB047 /* Project object */;
+}
