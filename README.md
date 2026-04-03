@@ -36,6 +36,8 @@ A native macOS log file viewer. Color-coded levels, live tail mode, and automati
 ## Build
 
 ```bash
+xcodegen generate --spec project.yml
+
 xcodebuild clean build \
   -project TinyLog.xcodeproj \
   -scheme TinyLog \
@@ -43,7 +45,9 @@ xcodebuild clean build \
   -derivedDataPath /tmp/tinybuild/tinylog \
   CODE_SIGN_IDENTITY="-"
 
+rm -rf /Applications/TinyLog.app
 cp -R /tmp/tinybuild/tinylog/Build/Products/Release/TinyLog.app /Applications/
+xattr -cr /Applications/TinyLog.app
 ```
 
 ## Keyboard Shortcuts
