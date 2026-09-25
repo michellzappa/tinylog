@@ -10,6 +10,7 @@
 		1301E3971F60357573623158 /* TinyKit in Frameworks */ = {isa = PBXBuildFile; productRef = C30C7F76B72E82FBC89FAD17 /* TinyKit */; };
 		200374DA413F299CD6233F5C /* LogPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECBEBE34C923EC3748312E /* LogPreviewView.swift */; };
 		65847DA3BD651428C968869F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0D544A87BDE6E9B1EFCE60 /* ContentView.swift */; };
+		6C24EB2980EBAB6E68072820 /* TinyLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A856665812C6B959BB340E /* TinyLogUITests.swift */; };
 		6EAED121C55EACF4F6C0FCAF /* doc_log.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7357513D82EFA8DB518BD3CD /* doc_log.icns */; };
 		9B286570CFE233141EEDC5E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79B87420E2C76B49A34AAD34 /* Assets.xcassets */; };
 		A5AE1D86B634AB78CAF284C9 /* TinyLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDE0AB8A64CCEBAE0ECC567 /* TinyLogApp.swift */; };
@@ -18,8 +19,19 @@
 		CE706B8611D2EA087E4E1263 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = C74B9433538E02E27961811D /* AppIcon.icon */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3ADF4853FAED8890B26F3F6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99B677D377C05643ED2AB047 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 753CFC75D7F71DB6AE1687CD;
+			remoteInfo = TinyLog;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		5D0D544A87BDE6E9B1EFCE60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6B2887FB6BE6CA84EC673387 /* TinyLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7357513D82EFA8DB518BD3CD /* doc_log.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = doc_log.icns; sourceTree = "<group>"; };
 		79B87420E2C76B49A34AAD34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FBA0710CD7C9F54C01D068A /* TinyKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TinyKit; path = Packages/TinyKit; sourceTree = SOURCE_ROOT; };
@@ -27,6 +39,7 @@
 		9D064F84B189C07EFB5348A6 /* LogHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogHighlighter.swift; sourceTree = "<group>"; };
 		B2F99846382AB61593218878 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BCDE0AB8A64CCEBAE0ECC567 /* TinyLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyLogApp.swift; sourceTree = "<group>"; };
+		C3A856665812C6B959BB340E /* TinyLogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyLogUITests.swift; sourceTree = "<group>"; };
 		C74B9433538E02E27961811D /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		CD48048AD7BF3AABC783DE3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E121FA10F3600C7660EE6501 /* TinyLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		251A68E691BDC16A392E7517 /* TinyLogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C3A856665812C6B959BB340E /* TinyLogUITests.swift */,
+			);
+			name = TinyLogUITests;
+			path = UITests/TinyLogUITests;
+			sourceTree = "<group>";
+		};
 		31BADA670A905847BC7BEB51 /* TinyLog */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +87,7 @@
 				653B606A6C06E511D19E4817 /* Packages */,
 				33E19ED3FBC2585D18126FF2 /* Resources */,
 				31BADA670A905847BC7BEB51 /* TinyLog */,
+				251A68E691BDC16A392E7517 /* TinyLogUITests */,
 				88EC0D8427AC2343430DFF36 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				E121FA10F3600C7660EE6501 /* TinyLog.app */,
+				6B2887FB6BE6CA84EC673387 /* TinyLogUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +131,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4FCEFB2C514B150DEE3565D8 /* TinyLogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA20FEC41D03ADD1D0E3C466 /* Build configuration list for PBXNativeTarget "TinyLogUITests" */;
+			buildPhases = (
+				B69FBC2B0C3D44F673C012CE /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F37CF5D3BDD546EFFF3351ED /* PBXTargetDependency */,
+			);
+			name = TinyLogUITests;
+			packageProductDependencies = (
+			);
+			productName = TinyLogUITests;
+			productReference = 6B2887FB6BE6CA84EC673387 /* TinyLogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		753CFC75D7F71DB6AE1687CD /* TinyLog */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 100397F8C41ABECC68A65016 /* Build configuration list for PBXNativeTarget "TinyLog" */;
@@ -136,6 +178,9 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					4FCEFB2C514B150DEE3565D8 = {
+						TestTargetID = 753CFC75D7F71DB6AE1687CD;
+					};
 					753CFC75D7F71DB6AE1687CD = {
 						DevelopmentTeam = 992N457T8D;
 						ProvisioningStyle = Automatic;
@@ -160,6 +205,7 @@
 			projectRoot = "";
 			targets = (
 				753CFC75D7F71DB6AE1687CD /* TinyLog */,
+				4FCEFB2C514B150DEE3565D8 /* TinyLogUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -190,7 +236,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B69FBC2B0C3D44F673C012CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C24EB2980EBAB6E68072820 /* TinyLogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F37CF5D3BDD546EFFF3351ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 753CFC75D7F71DB6AE1687CD /* TinyLog */;
+			targetProxy = 3ADF4853FAED8890B26F3F6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2DB7FB7B4A71DE73AD7CA3B7 /* Debug */ = {
@@ -214,7 +276,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tinylog.app;
 				PRODUCT_NAME = TinyLog;
@@ -269,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,7 +363,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tinylog.app;
 				PRODUCT_NAME = TinyLog;
@@ -310,6 +372,23 @@
 				SWIFT_VERSION = 5.9;
 			};
 			name = Release;
+		};
+		76A306243292D67F64410501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tinylog.app.uitests;
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = TinyLog;
+			};
+			name = Debug;
 		};
 		DA8C5EC4D9B79D659C6B3707 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -362,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -374,6 +453,23 @@
 			};
 			name = Debug;
 		};
+		F51A5B08564A7BDF92FE8D8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tinylog.app.uitests;
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = TinyLog;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -382,6 +478,15 @@
 			buildConfigurations = (
 				2DB7FB7B4A71DE73AD7CA3B7 /* Debug */,
 				459B031731A9D089B204F714 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AA20FEC41D03ADD1D0E3C466 /* Build configuration list for PBXNativeTarget "TinyLogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76A306243292D67F64410501 /* Debug */,
+				F51A5B08564A7BDF92FE8D8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

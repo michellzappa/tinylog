@@ -12,7 +12,12 @@ let package = Package(
             name: "TinyLog",
             dependencies: ["TinyKit"],
             path: "Sources/TinyLog",
-            exclude: ["Resources"],
+            exclude: ["Resources", "Info.plist"],
+            swiftSettings: [.swiftLanguageMode(.v5)]
+        ),
+        .testTarget(
+            name: "TinyLogTests",
+            dependencies: ["TinyLog"],
             swiftSettings: [.swiftLanguageMode(.v5)]
         ),
     ]

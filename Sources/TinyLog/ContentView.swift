@@ -16,6 +16,11 @@ struct ContentView: View {
         previewUserPref && state.isLogFile
     }
 
+    private var uiSmokeStatus: String {
+        let fileName = state.selectedFile?.lastPathComponent ?? "no-file"
+        return "\(fileName) entries:\(state.filteredEntries.count)"
+    }
+
     var body: some View {
         NavigationSplitView(columnVisibility: $columnVisibility) {
             TinyFileList(state: state)
@@ -44,6 +49,9 @@ struct ContentView: View {
 
                 StatusBarView(text: state.content)
             }
+        }
+        .overlay(alignment: .bottomTrailing) {
+            TinyUITestProbe(text: uiSmokeStatus)
         }
         .onDisappear {
             if let monitor = eventMonitor {
